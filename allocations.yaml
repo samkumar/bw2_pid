@@ -1,0 +1,63 @@
+# This is the canonical file for allocation of bosswave payload object id PID.
+# See
+---
+  0.0.0.0/4:
+    short: Binary protocols
+    desc:
+      This is a superclass for classes that are generally unreadable in
+      their plain form and require translation.
+
+  64.0.0.0/4:
+    short: Human readable text
+    desc:
+      This is a superclass for classes that are moderately understandable
+      if they are read directly in their binary form. Generally these are
+      protocols that were designed specifically to be human readable.
+
+  0.0.0.0/8:
+    short: Bosswave Routing Object
+    desc:
+      This class and schema block is reserved for bosswave routing objects
+      represented using the full PID.
+
+  1.0.0.0/8:
+    short: Blob
+    desc:
+      This is a class for schemas that do not use a public encoding format.
+      In general it should be avoided. Schemas below this should include
+      the key "readme" with a url to a description of the schema that is
+      sufficiently detailed to allow for a developer to reverse engineer the
+      protocol if required.
+
+  2.0.0.0/8:
+    short: MsgPack
+    desc:
+      This class is for schemas that are represented in MsgPack
+
+  3.0.0.0/8:
+    short: Captain Proto
+    desc:
+      This class is for captain proto interfaces. Schemas below this should
+      include the key "schema" with a url to their .capnp file
+
+  65.0.0.0/8:
+    short: JSON
+    desc:
+      This class is for schemas that are represented in JSON
+
+  66.0.0.0/8:
+    short: XML
+    desc:
+      This class is for schemas that are represented in XML
+
+  67.0.0.0/8:
+    short: YAML
+    desc:
+      This class is for schemas that are represented in YAML
+
+  64.0.1.0/32:
+    short: String
+    desc:
+      A plain string with no rigid semantic meaning. This can be thought of
+      as a print statement. Anything that has semantic meaning like a process
+      log should use a different schema.
