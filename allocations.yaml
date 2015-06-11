@@ -55,6 +55,11 @@
     desc:
       This class is for schemas that are represented in YAML
 
+  2.0.2.0/32:
+    short: Spawnpoint stdout
+    desc:
+      This contains stdout data from a spawnpoint container
+      
   64.0.1.0/32:
     short: String
     desc:
