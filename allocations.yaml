@@ -69,7 +69,7 @@
     sym: SpawnpointLog
     desc:
       This contains stdout data from a spawnpoint container. It is a msgpacked
-      dictionary that contains a "service" key, a "time" key (unix timestamp)
+      dictionary that contains a "service" key, a "time" key (unix nano timestamp)
       and a "contents" key and a "spalias" key.
       
   64.0.1.0/32:
