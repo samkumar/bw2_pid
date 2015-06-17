@@ -3,12 +3,14 @@
 ---
   0.0.0.0/4:
     short: Binary protocols
+    sym: Binary
     desc:
       This is a superclass for classes that are generally unreadable in
       their plain form and require translation.
 
   64.0.0.0/4:
     short: Human readable text
+    sym: Text
     desc:
       This is a superclass for classes that are moderately understandable
       if they are read directly in their binary form. Generally these are
@@ -16,12 +18,14 @@
 
   0.0.0.0/8:
     short: Bosswave Routing Object
+    sym: BWRoutingObject
     desc:
       This class and schema block is reserved for bosswave routing objects
       represented using the full PID.
 
   1.0.0.0/8:
     short: Blob
+    sym: Blob
     desc:
       This is a class for schemas that do not use a public encoding format.
       In general it should be avoided. Schemas below this should include
@@ -31,37 +35,44 @@
 
   2.0.0.0/8:
     short: MsgPack
+    sym: MsgPack
     desc:
       This class is for schemas that are represented in MsgPack
 
   3.0.0.0/8:
     short: Captain Proto
+    sym: CapnP
     desc:
       This class is for captain proto interfaces. Schemas below this should
       include the key "schema" with a url to their .capnp file
 
   65.0.0.0/8:
     short: JSON
+    sym: JSON
     desc:
       This class is for schemas that are represented in JSON
 
   66.0.0.0/8:
     short: XML
+    sym: XML
     desc:
       This class is for schemas that are represented in XML
 
   67.0.0.0/8:
     short: YAML
+    sym: YAML
     desc:
       This class is for schemas that are represented in YAML
 
   2.0.2.0/32:
     short: Spawnpoint stdout
+    sym: SpawnpointLog
     desc:
       This contains stdout data from a spawnpoint container
       
   64.0.1.0/32:
     short: String
+    sym: String
     desc:
       A plain string with no rigid semantic meaning. This can be thought of
       as a print statement. Anything that has semantic meaning like a process
@@ -69,10 +80,12 @@
   
   67.0.2.0/32:
     short: SpawnPoint config
+    sym: SpawnpointConfig
     desc:
       A configuration file for SpawnPoint (github.com/immesys/spawnpoint)
       
   67.0.2.1/32:
     short: SpawnPoint heartbeat
+    sym: SpawnpointHeartbeat
     desc:
       A heartbeat message from spawnpoint
