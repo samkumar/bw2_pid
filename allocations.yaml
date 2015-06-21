@@ -82,7 +82,7 @@
     short: Simple Metadata entry
     sym: SMetadata
     desc:
-      This contains a simple "val":string "ts":int64 metadata entry. The key is 
+      This contains a simple "val" string and "ts" int64 metadata entry. The key is 
       determined by the URI. Other information MAY be present in the msgpacked
       object. The timestamp is used for merging metadata entries.
       
