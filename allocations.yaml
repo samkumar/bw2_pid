@@ -68,7 +68,7 @@
     short: Binary actuation
     sym: BinaryActuation
     desc:
-      This payload object is one byte long: 0x00 for off, 0x01 for on.
+      This payload object is one byte long, 0x00 for off, 0x01 for on.
       
   2.0.2.0/32:
     short: Spawnpoint stdout
