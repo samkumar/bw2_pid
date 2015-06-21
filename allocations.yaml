@@ -71,6 +71,14 @@
       This contains stdout data from a spawnpoint container. It is a msgpacked
       dictionary that contains a "service" key, a "time" key (unix nano timestamp)
       and a "contents" key and a "spalias" key.
+  
+  2.0.3.1/32:
+    short: Simple Metadata entry
+    sym: SMetadata
+    desc:
+      This contains a simple "val":string "ts":int64 metadata entry. The key is 
+      determined by the URI. Other information MAY be present in the msgpacked
+      object. The timestamp is used for merging metadata entries.
       
   64.0.1.0/32:
     short: String
