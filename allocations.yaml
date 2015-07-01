@@ -70,6 +70,12 @@
     desc:
       This payload object is one byte long, 0x00 for off, 0x01 for on.
       
+  1.0.2.0/32:
+    short: Double
+    sym: Double
+    desc:
+      This payload is an 8 byte long IEEE 754 double floating point value
+      
   2.0.2.0/32:
     short: Spawnpoint stdout
     sym: SpawnpointLog
