@@ -74,7 +74,10 @@
     short: Double
     sym: Double
     desc:
-      This payload is an 8 byte long IEEE 754 double floating point value
+      This payload is an 8 byte long IEEE 754 double floating point value encoded 
+      in little endian. This should only be used if the semantic meaning is obvious
+      in the context, otherwise a PID with a more specific semantic meaning should 
+      be used.
       
   2.0.2.0/32:
     short: Spawnpoint stdout
