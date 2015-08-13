@@ -69,16 +69,16 @@
     sym: BinaryActuation
     desc:
       This payload object is one byte long, 0x00 for off, 0x01 for on.
-      
+
   1.0.2.0/32:
     short: Double
     sym: Double
     desc:
-      This payload is an 8 byte long IEEE 754 double floating point value encoded 
+      This payload is an 8 byte long IEEE 754 double floating point value encoded
       in little endian. This should only be used if the semantic meaning is obvious
-      in the context, otherwise a PID with a more specific semantic meaning should 
+      in the context, otherwise a PID with a more specific semantic meaning should
       be used.
-      
+
   2.0.2.0/32:
     short: Spawnpoint stdout
     sym: SpawnpointLog
@@ -86,15 +86,15 @@
       This contains stdout data from a spawnpoint container. It is a msgpacked
       dictionary that contains a "service" key, a "time" key (unix nano timestamp)
       and a "contents" key and a "spalias" key.
-  
+
   2.0.3.1/32:
     short: Simple Metadata entry
     sym: SMetadata
     desc:
-      This contains a simple "val" string and "ts" int64 metadata entry. The key is 
+      This contains a simple "val" string and "ts" int64 metadata entry. The key is
       determined by the URI. Other information MAY be present in the msgpacked
       object. The timestamp is used for merging metadata entries.
-      
+
   64.0.1.0/32:
     short: String
     sym: String
@@ -102,13 +102,19 @@
       A plain string with no rigid semantic meaning. This can be thought of
       as a print statement. Anything that has semantic meaning like a process
       log should use a different schema.
-  
+
+  64.0.1.1/32:
+    short: FMD Intent String
+    sym: FMDIntentString
+    desc:
+      A plain string used as an intent for the follow-me display service.
+
   67.0.2.0/32:
     short: SpawnPoint config
     sym: SpawnpointConfig
     desc:
       A configuration file for SpawnPoint (github.com/immesys/spawnpoint)
-      
+
   67.0.2.1/32:
     short: SpawnPoint heartbeat
     sym: SpawnpointHeartbeat
