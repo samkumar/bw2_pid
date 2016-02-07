@@ -1,5 +1,4 @@
 # This is the canonical file for allocation of bosswave payload object id PID.
-# See
 ---
   0.0.0.0/4:
     short: Binary protocols
@@ -94,7 +93,24 @@
       This contains a simple "val" string and "ts" int64 metadata entry. The key is
       determined by the URI. Other information MAY be present in the msgpacked
       object. The timestamp is used for merging metadata entries.
-
+  
+  2.0.4.0/24:
+    short: Hamilton Messages
+    sym: HamiltonBase
+    desc:
+      This is the base class for messages used with the Hamilton motes. The only
+      key guaranteed is "#" that contains a uint16 representation of the serial
+      of the mote the message is destined for or originated from. 
+      
+  2.0.4.64/26:
+    short: Hamilton Telemetry
+    sym: HamiltonTelemetry
+    desc:
+      This object contains a "#" field for the serial number, as well as possibly
+      containing an "A" field with a list of X, Y, and Z accelerometer values. A
+      "T" field containing the temperature as an integer in degrees C multiplied
+      by 10000, and an "L" field containing the illumination in Lux.
+      
   64.0.1.0/32:
     short: String
     sym: String
