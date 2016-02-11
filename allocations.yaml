@@ -78,6 +78,12 @@
       in the context, otherwise a PID with a more specific semantic meaning should
       be used.
 
+  1.0.1.1/32:
+    short: Packed Bosswave Message
+    sym: BWMessage
+    desc:
+      This object contains an entire signed and encoded bosswave message
+      
   2.0.2.0/32:
     short: Spawnpoint stdout
     sym: SpawnpointLog
