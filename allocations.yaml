@@ -37,6 +37,12 @@
     sym: MsgPack
     desc:
       This class is for schemas that are represented in MsgPack
+  
+  2.0.1.0/24:
+    short: LogDict
+    sym: LogDict
+    desc:
+      This class is for log messages encoded in msgpack
 
   3.0.0.0/8:
     short: Captain Proto
