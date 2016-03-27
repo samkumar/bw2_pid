@@ -98,6 +98,14 @@
       dictionary that contains a "service" key, a "time" key (unix nano timestamp)
       and a "contents" key and a "spalias" key.
 
+  2.0.3.0/24:
+    short: TSTaggedMP
+    sym: TSTaggedMP
+    desc:
+      This superclass describes "ts"->int64 tagged msgpack objects. The timestamp
+      is used for merging entries and determining which is later and should be the
+      final value.
+      
   2.0.3.1/32:
     short: Simple Metadata entry
     sym: SMetadata
@@ -105,7 +113,14 @@
       This contains a simple "val" string and "ts" int64 metadata entry. The key is
       determined by the URI. Other information MAY be present in the msgpacked
       object. The timestamp is used for merging metadata entries.
-  
+      
+  2.0.3.0/24:
+    short: TSTaggedMP
+    sym: TSTaggedMP
+    desc:
+      This superclass describes "ts"->int64 tagged msgpack objects. The timestamp
+      is used for merging entries and determining which is later and should be the
+      final value.
   2.0.4.0/24:
     short: Hamilton Messages
     sym: HamiltonBase
@@ -149,11 +164,3 @@
     desc:
       A heartbeat message from spawnpoint
       
-  67.0.3.1/32:
-    short: ValidTime
-    sym: ValidTime
-    desc:
-      A text-encoded decimal number denoting the number of milliseconds since the epoch.
-      Semantically it denotes the time that the other POs in the message can be considered
-      valid (which is distinct from when the message was sent). This PO is used in XATTR
-      messages to determine priority when merging sets of attributes.
