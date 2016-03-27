@@ -137,6 +137,14 @@
       containing an "A" field with a list of X, Y, and Z accelerometer values. A
       "T" field containing the temperature as an integer in degrees C multiplied
       by 10000, and an "L" field containing the illumination in Lux.
+  
+  2.0.5.1/32:
+    short: HSBLight Message
+    sym: HSBLightMessage
+    desc:
+      This object may contain "hue", "saturation", "brightness" fields with a
+      float from 0 to 1. It may also contain an "on" key with a boolean.
+      Omitting fields leaves them at their previous state. 
       
   64.0.1.0/32:
     short: String
