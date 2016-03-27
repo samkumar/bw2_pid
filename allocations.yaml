@@ -148,3 +148,12 @@
     sym: SpawnpointHeartbeat
     desc:
       A heartbeat message from spawnpoint
+      
+  67.0.3.1/32:
+    short: ValidTime
+    sym: ValidTime
+    desc:
+      A text-encoded decimal number denoting the number of milliseconds since the epoch.
+      Semantically it denotes the time that the other POs in the message can be considered
+      valid (which is distinct from when the message was sent). This PO is used in XATTR
+      messages to determine priority when merging sets of attributes.
