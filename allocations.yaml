@@ -15,7 +15,7 @@
       if they are read directly in their binary form. Generally these are
       protocols that were designed specifically to be human readable.
 
-  0.0.0.0/8:
+  0.0.0.0/24:
     short: Bosswave Routing Object
     sym: BWRoutingObject
     desc:
