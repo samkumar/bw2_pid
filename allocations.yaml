@@ -226,6 +226,14 @@
     desc:
       A plain string used as an intent for the follow-me display service.
 
+  64.0.1.2/32:
+    short: Account balance
+    sym: AccountBalance
+    desc:
+      A comma seperated representation of an account and its balance as addr,decimal,human_readable. For example:
+      "0x49b1d037c33fdaad75d2532cd373fb5db87cc94c,57203431159181996982272,57203.4311 Ether". Be careful in that
+      the decimal representation will frequently be bigger than an int64.
+      
   67.0.2.0/32:
     short: SpawnPoint config
     sym: SpawnpointConfig
