@@ -230,7 +230,7 @@
     short: Account balance
     sym: AccountBalance
     desc:
-      A comma seperated representation of an account and its balance as addr,decimal,human_readable. For example:
+      A comma seperated representation of an account and its balance as addr,decimal,human_readable. For example
       "0x49b1d037c33fdaad75d2532cd373fb5db87cc94c,57203431159181996982272,57203.4311 Ether". Be careful in that
       the decimal representation will frequently be bigger than an int64.
       
