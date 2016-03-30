@@ -75,6 +75,12 @@
     sym: ROOriginVK
     desc:
       The origin VK of a message that does not contain a PAC
+  
+  0.0.0.51/32:
+    short: Designated router verifying key
+    sym: RODRVK
+    desc:
+      a 32 byte designated router verifying key
       
   0.0.0.64/32:
     short: Expiry
