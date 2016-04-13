@@ -161,6 +161,18 @@
     sym: BWMessage
     desc:
       This object contains an entire signed and encoded bosswave message
+  
+  1.0.3.1/32:
+    short: Wavelet binary
+    sym: Wavelet
+    desc:
+      This object contains a BOSSWAVE Wavelet
+      
+  2.0.3.1/32:
+    short: Wavelet manifest
+    sym: WaveletManifest
+    desc:
+      This msgpack dictionary contains a wavelet manifest (see github.com/immesys/wavelet)
       
   2.0.2.0/32:
     short: Spawnpoint stdout
