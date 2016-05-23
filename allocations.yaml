@@ -241,7 +241,7 @@
     short: BW2ChatMessages
     sym: BW2ChatMessages
     desc:
-      These are MsgPack dictionaries sent for the BW2Chat program (https://github.com/gtfierro/bw2chat)
+      "These are MsgPack dictionaries sent for the BW2Chat program (https://github.com/gtfierro/bw2chat)"
 
   2.0.7.1/32:
     short: BW2Chat_CreateRoomMessage
@@ -253,9 +253,9 @@
     short: BW2Chat_ChatMessage
     sym: BW2Chat_ChatMessage
     desc:
-      A textual message to be sent to all members of a chatroom. This is a dictionary with three keys: "Room", the name
-      of the room to publish to (this is actually implicit in the publishing), "From", the alias you are using for the
-      chatroom, and "Message", the actual string to be displayed to all users in the room.
+      "A textual message to be sent to all members of a chatroom. This is a dictionary with three keys: 'Room', the name
+      of the room to publish to (this is actually implicit in the publishing), 'From', the alias you are using for the
+      chatroom, and 'Message', the actual string to be displayed to all users in the room."
 
   2.0.7.3/32:
     short: BW2Chat_JoinRoom
