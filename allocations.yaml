@@ -21,13 +21,13 @@
     desc:
       This class and schema block is reserved for bosswave routing objects
       represented using the full PID.
-      
+
   0.0.0.1/32:
     short: Access DChain hash
     sym: ROAccessDChainHash
     desc:
       An access dchain hash
-  
+
   0.0.0.17/32:
     short: Permission DChain hash
     sym: ROPermissionDChainHash
@@ -41,59 +41,59 @@
       An access dchain
 
   0.0.0.18/32:
-    short: Permission DChain 
+    short: Permission DChain
     sym: ROPermissionDChain
     desc:
       A permission dchain
-  
+
   0.0.0.32/32:
     short: Access DOT
     sym: ROAccessDOT
     desc:
       An access DOT
-      
+
   0.0.0.33/32:
     short: Permission DOT
     sym: ROPermissionDOT
     desc:
       A permission DOT
-     
+
   0.0.0.48/32:
     short: Entity
     sym: ROEntity
     desc:
       An entity
-      
+
   0.0.0.50/32:
     short: Entity with signing key
     sym: ROEntityWKey
     desc:
       An entity with signing key
-      
+
   0.0.0.49/32:
     short: Origin verifying key
     sym: ROOriginVK
     desc:
       The origin VK of a message that does not contain a PAC
-  
+
   0.0.0.51/32:
     short: Designated router verifying key
     sym: RODRVK
     desc:
       a 32 byte designated router verifying key
-      
+
   0.0.0.64/32:
     short: Expiry
     sym: ROExpiry
     desc:
       Sets an expiry for the message
-      
+
   0.0.0.80/32:
     short: Revocation
     sym: RORevocation
     desc:
       A revocation for an Entity or a DOT
-      
+
   1.0.0.0/8:
     short: Blob
     sym: Blob
@@ -109,7 +109,7 @@
     sym: MsgPack
     desc:
       This class is for schemas that are represented in MsgPack
-  
+
   2.0.1.0/24:
     short: LogDict
     sym: LogDict
@@ -161,19 +161,19 @@
     sym: BWMessage
     desc:
       This object contains an entire signed and encoded bosswave message
-  
+
   1.0.6.1/32:
     short: Wavelet binary
     sym: Wavelet
     desc:
       This object contains a BOSSWAVE Wavelet
-      
+
   2.0.6.1/32:
     short: Wavelet manifest
     sym: WaveletManifest
     desc:
       This msgpack dictionary contains a wavelet manifest (see github.com/immesys/wavelet)
-      
+
   2.0.2.0/32:
     short: Spawnpoint stdout
     sym: SpawnpointLog
@@ -189,7 +189,7 @@
       This superclass describes "ts"->int64 tagged msgpack objects. The timestamp
       is used for merging entries and determining which is later and should be the
       final value.
-      
+
   2.0.3.1/32:
     short: Simple Metadata entry
     sym: SMetadata
@@ -197,7 +197,7 @@
       This contains a simple "val" string and "ts" int64 metadata entry. The key is
       determined by the URI. Other information MAY be present in the msgpacked
       object. The timestamp is used for merging metadata entries.
-      
+
   2.0.3.0/24:
     short: TSTaggedMP
     sym: TSTaggedMP
@@ -211,8 +211,8 @@
     desc:
       This is the base class for messages used with the Hamilton motes. The only
       key guaranteed is "#" that contains a uint16 representation of the serial
-      of the mote the message is destined for or originated from. 
-      
+      of the mote the message is destined for or originated from.
+
   2.0.4.64/26:
     short: Hamilton Telemetry
     sym: HamiltonTelemetry
@@ -228,15 +228,47 @@
     desc:
       This object may contain "hue", "saturation", "brightness" fields with a
       float from 0 to 1. It may also contain an "on" key with a boolean.
-      Omitting fields leaves them at their previous state. 
-  
+      Omitting fields leaves them at their previous state.
+
   2.0.6.1/32:
     short: InterfaceDescriptor
     sym: InterfaceDescriptor
     desc:
       This object is used to describe an interface. It contains "uri", "iface","svc","namespace"
       "prefix" and "metadata" keys.
-      
+
+  2.0.7.0/24:
+    short: BW2ChatMessages
+    sym: BW2ChatMessages
+    desc:
+      These are MsgPack dictionaries sent for the BW2Chat program (https://github.com/gtfierro/bw2chat)
+
+  2.0.7.1/32:
+    short: BW2Chat_CreateRoomMessage
+    sym: BW2Chat_CreateRoomMessage
+    desc:
+      A dictionary with a single key "Name" indicating the room to be created. This will likely be deprecated.
+
+  2.0.7.2/32:
+    short: BW2Chat_ChatMessage
+    sym: BW2Chat_ChatMessage
+    desc:
+      A textual message to be sent to all members of a chatroom. This is a dictionary with three keys: "Room", the name
+      of the room to publish to (this is actually implicit in the publishing), "From", the alias you are using for the
+      chatroom, and "Message", the actual string to be displayed to all users in the room.
+
+  2.0.7.3/32:
+    short: BW2Chat_JoinRoom
+    sym: BW2Chat_JoinRoom
+    desc:
+      Notify users in the chatroom that you have joined. Dictionary with a single key "Alias" that has a value of your nickname
+
+  2.0.7.4/32:
+    short: BW2Chat_LeaveRoom
+    sym: BW2Chat_LeaveRoom
+    desc:
+      Notify users in the chatroom that you have left. Dictionary with a single key "Alias" that has a value of your nickname
+
   64.0.1.0/32:
     short: String
     sym: String
@@ -256,9 +288,9 @@
     sym: AccountBalance
     desc:
       A comma seperated representation of an account and its balance as addr,decimal,human_readable. For
-      example 0x49b1d037c33fdaad75d2532cd373fb5db87cc94c,57203431159181996982272,57203.4311 Ether  . Be 
+      example 0x49b1d037c33fdaad75d2532cd373fb5db87cc94c,57203431159181996982272,57203.4311 Ether  . Be
       careful in that the decimal representation will frequently be bigger than an int64.
-      
+
   67.0.2.0/32:
     short: SpawnPoint config
     sym: SpawnpointConfig
@@ -270,4 +302,4 @@
     sym: SpawnpointHeartbeat
     desc:
       A heartbeat message from spawnpoint
-      
+
