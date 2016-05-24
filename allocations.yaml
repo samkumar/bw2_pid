@@ -182,6 +182,14 @@
       dictionary that contains a "service" key, a "time" key (unix nano timestamp)
       and a "contents" key and a "spalias" key.
 
+  2.0.2.1/32:
+      short: SpawnPoint heartbeat
+      sym: SpawnpointHeartbeat
+      desc:
+        A heartbeat message from spawnpoint. It is a msgpack dictionary that
+        contains the keys "Alias", "Time", "TotalMem", "TotalCpuShares",
+        "AvailableMem", and "AvailableCpuShares".
+
   2.0.3.0/24:
     short: TSTaggedMP
     sym: TSTaggedMP
@@ -296,10 +304,3 @@
     sym: SpawnpointConfig
     desc:
       A configuration file for SpawnPoint (github.com/immesys/spawnpoint)
-
-  67.0.2.1/32:
-    short: SpawnPoint heartbeat
-    sym: SpawnpointHeartbeat
-    desc:
-      A heartbeat message from spawnpoint
-
