@@ -235,7 +235,7 @@
     sym: HSBLightMessage
     desc:
       This object may contain "hue", "saturation", "brightness" fields with a
-      float from 0 to 1. It may also contain an "on" key with a boolean.
+      float from 0 to 1. It may also contain an "state" key with a boolean.
       Omitting fields leaves them at their previous state.
 
   2.0.6.1/32:
