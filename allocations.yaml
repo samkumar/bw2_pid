@@ -190,6 +190,14 @@
         contains the keys "Alias", "Time", "TotalMem", "TotalCpuShares",
         "AvailableMem", and "AvailableCpuShares".
 
+  2.0.2.2/32:
+      short: SpawnPoint Service Heartbeat
+      sym: SpawnpointSvcHb
+      desc:
+        A heartbeat from spawnpoint about a currently running service. It is a
+        msgpack dictionary that contains the keys "SpawnpointURI", "Name",
+        "Time", "MemAlloc", and "CpuShares".
+
   2.0.3.0/24:
     short: TSTaggedMP
     sym: TSTaggedMP
