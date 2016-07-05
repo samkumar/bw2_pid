@@ -373,7 +373,23 @@
         - Query: the string query that was sent
         - Nonce: the nonce in the query request
         - Error: string of the returned error"
-
+  
+  2.0.9.0/24:
+    short: Unique Object Collection
+    sym: UniqueObjectCollection
+    desc:
+        "An object that is part of a collection, identified by UUID. It must
+        contain at least a UUID key uniquely identifying the collection"
+        
+  2.0.9.16/28:
+    short: Timeseries Reading
+    sym: TimeseriesReading
+    desc:
+        "Map with at least these keys:
+        - UUID: string UUID uniquely identifying this timeseries
+        - Time: int64 timestamp, UTC nanoseconds
+        - Value: float64 value"
+ 
   64.0.1.0/32:
     short: String
     sym: String
