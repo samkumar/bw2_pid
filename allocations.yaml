@@ -375,11 +375,12 @@
         - Error: string of the returned error"
   
   2.0.9.0/24:
-    short: Unique Object Collection
-    sym: UniqueObjectCollection
+    short: Unique Object Stream
+    sym: UniqueObjectStream
     desc:
-        "An object that is part of a collection, identified by UUID. It must
-        contain at least a UUID key uniquely identifying the collection"
+        "An object that is part of a (possibly ordered) stream, identified 
+        by UUID. It must contain at least a UUID key uniquely identifying 
+        the collection"
         
   2.0.9.16/28:
     short: Timeseries Reading
