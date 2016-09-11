@@ -391,6 +391,20 @@
         - Time: int64 timestamp, UTC nanoseconds
         - Value: float64 value"
  
+  2.0.10.1/32:
+    short: L7G v1 Raw message
+    sym: L7G1Raw
+    desc:
+      "A map containing
+      - srcmac: the MAC address of the sensor
+      - srcip: the IP address of the sensor, if available
+      - popid: the ID of the point of presence that received the packet
+      - poptime: the boot time (in us) of the pop when the message was received
+      - brtime: the real time (in ns) at the border router when the message was relayed to bosswave
+      - rssi: the RSSI of the message at the pop, if available
+      - lqi: the LQI of the message at the pop, if available
+      - payload: the raw message"
+      
   64.0.1.0/32:
     short: String
     sym: String
