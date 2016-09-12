@@ -404,6 +404,17 @@
       - rssi: the RSSI of the message at the pop, if available
       - lqi: the LQI of the message at the pop, if available
       - payload: the raw message"
+  
+  2.0.11.1/32:
+    short: Chirp Anemometer Feed
+    sym: ChirpFeed
+    desc:
+      "A map containing
+      - vendor: the vendor implementing the algorithm
+      - sensor: the anemometer this data is for
+      - algorithm: symbol name of the algorithm type/version
+      - tofs: a list of src,dst,val time of flight measurements in microseconds
+      - extradata: a list of string extra from the algorithm"
       
   64.0.1.0/32:
     short: String
