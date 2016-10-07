@@ -406,6 +406,12 @@
       - lqi: the LQI of the message at the pop, if available
       - payload: the raw message"
   
+  2.0.10.2/32:
+    short: L7G v1 stats message
+    sym: L7G1Stats
+    desc:
+      tbd
+      
   2.0.11.1/32:
     short: Chirp Anemometer Feed
     sym: ChirpFeed
