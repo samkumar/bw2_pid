@@ -439,6 +439,12 @@
         - time: nanoseconds since the epoch
         - other stuff TODO"
         
+  2.0.12.1/32:    
+    short: VenstarInfo
+    sym: VenstarInfo
+    desc:
+      "Consult the venstar API documentation at http://developer.venstar.com/restcalls.html"
+
   64.0.1.0/32:
     short: String
     sym: String
