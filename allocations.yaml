@@ -94,6 +94,12 @@
     desc:
       A revocation for an Entity or a DOT
 
+  0.0.1.0/24:
+    short: STARWAVE
+    sym: POEncryptedSTARWAVE
+    desc:
+      A message encrypted end-to-end with the STARWAVE protocols
+
   1.0.0.0/8:
     short: Blob
     sym: Blob
@@ -373,15 +379,15 @@
         - Query: the string query that was sent
         - Nonce: the nonce in the query request
         - Error: string of the returned error"
-  
+
   2.0.9.0/24:
     short: Unique Object Stream
     sym: UniqueObjectStream
     desc:
-        "An object that is part of a (possibly ordered) stream, identified 
-        by UUID. It must contain at least a UUID key uniquely identifying 
+        "An object that is part of a (possibly ordered) stream, identified
+        by UUID. It must contain at least a UUID key uniquely identifying
         the collection"
-        
+
   2.0.9.16/28:
     short: Timeseries Reading
     sym: TimeseriesReading
@@ -390,7 +396,7 @@
         - UUID: string UUID uniquely identifying this timeseries
         - Time: int64 timestamp, UTC nanoseconds
         - Value: float64 value"
- 
+
   2.0.10.1/32:
     short: L7G v1 Raw message
     sym: L7G1Raw
@@ -405,13 +411,13 @@
       - rssi: the RSSI of the message at the pop, if available
       - lqi: the LQI of the message at the pop, if available
       - payload: the raw message"
-  
+
   2.0.10.2/32:
     short: L7G v1 stats message
     sym: L7G1Stats
     desc:
       tbd
-      
+
   2.0.11.1/32:
     short: Chirp Anemometer Feed
     sym: ChirpFeed
@@ -422,7 +428,7 @@
       - algorithm: symbol name of the algorithm type/version
       - tofs: a list of src,dst,val time of flight measurements in microseconds
       - extradata: a list of string extra from the algorithm"
-  
+
   2.0.11.2/32:
     short: Hamilton OT
     sym: HamiltonOT
@@ -438,25 +444,25 @@
       "A map containing
         - time: nanoseconds since the epoch
         - other stuff TODO"
-        
-  2.0.12.1/32:    
+
+  2.0.12.1/32:
     short: VenstarInfo
     sym: VenstarInfo
     desc:
       "Consult the venstar API documentation at http://developer.venstar.com/restcalls.html"
-      
+
   2.0.12.2/32:
     short: VenstarControl
     sym: VenstarControl
     desc:
       "Consult the documentation"
-  
+
   2.0.12.3/32:
     short: TPLink
     symc: TPLink
     desc:
       "Consult the documentation"
-      
+
   64.0.1.0/32:
     short: String
     sym: String
