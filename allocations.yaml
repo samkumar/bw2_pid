@@ -453,7 +453,7 @@
   
   2.0.12.3/32:
     short: TPLink
-    symc: TPLink
+    sym: TPLink
     desc:
       "Consult the documentation"
       
